@@ -1,3 +1,5 @@
+import "./page.css";
+
 export default function Home() {
   const navItems = [
     {
@@ -24,10 +26,14 @@ export default function Home() {
 
   return (
     <main className="min-h-screen">
-      <nav>
-        <ul className="flex flex-col justify-center align-middle">
+      <input className="hidden side-menu" type="checkbox" id="side-menu"/>
+      <label className="hamb cursor-pointer float-right px-[40px] py-[20px]" htmlFor="side-menu">
+        <span className="hamb-line bg-white block h-[2px] relative w-[24px]" />
+      </label>
+      <nav className="fixed w-full mt-10 overflow-hidden transition ease-out delay-500 max-h-0">
+        <ul className="flex flex-col justify-center w-full align-middle menu">
           {navItems.map(item => (
-            <li key={item.href}>
+            <li key={item.href} className="my-2 text-center">
               <a href={`#${item.href}`}>
                 {item.label}
               </a>
