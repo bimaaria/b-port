@@ -2,13 +2,13 @@
 
 import * as React from "react";
 import Image from "next/image";
-import logoIij from "../../../public/images/logos/logo-iij.png";
-import logoAntaka from "../../../public/images/logos/logo-antaka.png";
-import logoReact from "../../../public/icons/react.svg"
-import logoLaravel from "../../../public/icons/laravel.svg"
-import logoPhp from "../../../public/icons/php.svg"
-import logoJquery from "../../../public/icons/jquery.svg"
-import logoMysql from "../../../public/icons/mysql.svg"
+import logoIij from "../../../../public/images/logos/logo-iij.png";
+import logoAntaka from "../../../../public/images/logos/logo-antaka.png";
+import logoReact from "../../../../public/icons/react.svg"
+import logoLaravel from "../../../../public/icons/laravel.svg"
+import logoPhp from "../../../../public/icons/php.svg"
+import logoJquery from "../../../../public/icons/jquery.svg"
+import logoMysql from "../../../../public/icons/mysql.svg"
 
 export default function ExpCard() {
   const experiences = [
@@ -34,15 +34,15 @@ export default function ExpCard() {
     <>
       {experiences.map(exp => (
         <div 
-          className="px-4 mx-auto my-4 border rounded border-custom-dark text-custom-dark h-[48%] w-[90%] flex flex-col"
+          className="px-4 mx-auto my-4 border rounded border-cyan-500 text-white h-[48%] w-[90%] flex flex-col"
           id="experience-card" 
           key={exp.id}
         >
           <div className="text-center">
             <Image
               src={exp.logo}
-              width={120}
-              height={120}
+              width={100}
+              height={100}
               alt={`logo of ${exp.company}`}
               className="m-auto"
             />
