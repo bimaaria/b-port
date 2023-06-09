@@ -17,6 +17,8 @@
 
 .side-menu:checked ~ nav{
   max-height: 100%;
+  transition: max-height 2s;
+  background-color: rgb(34 211 238);
 }
 .side-menu:checked ~ .hamb .hamb-line {
   background: transparent;
