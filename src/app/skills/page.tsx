@@ -16,7 +16,7 @@ export default function Skills() {
   return (
     <section className="flex flex-col h-screen min-h-screen px-4 py-10 align-middle" id="skills">
       <h1 className="text-xl">Skills</h1>
-      <div className="flex flex-wrap justify-between w-full h-full align-middle">
+      <div className="flex flex-wrap justify-around w-full h-full align-middle">
         {skills.map(skill => (
           <Image
             src={skill}
