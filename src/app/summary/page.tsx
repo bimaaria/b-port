@@ -11,7 +11,18 @@ export default function Summary() {
         <span className="font-bold text-cyan-500"> Javascript </span>
         ecosystem and it's frameworks.
       </p>
-      <button className="border rounded w-[120px] h-[36px] border-cyan-500 hover:cursor-pointer" type="button"><a href="#about">Reach me</a></button>
+      <div className="flex">
+        <button className="border rounded w-[120px] h-[36px] border-cyan-500 hover:cursor-pointer mr-2" type="button" >
+          <a
+            href="/files/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Resume
+          </a>
+        </button>
+        <button className="border rounded w-[120px] h-[36px] bg-cyan-500 hover:cursor-pointer" type="button"><a href="#about">About me</a></button>
+      </div>
     </section>
   )
 }
