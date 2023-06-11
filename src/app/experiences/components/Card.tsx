@@ -53,8 +53,9 @@ export default function ExpCard() {
             <h3>{exp.period}</h3>
             <p className="mt-4">Tech Stack</p>
             <div className="inline-flex">
-              {exp.techStack.map(tech => (
+              {exp.techStack.map((tech, index) => (
                 <Image
+                  key={`${exp.id}-${tech}-${index}`}
                   src={tech}
                   width={40}
                   height={40}
