@@ -1,22 +1,17 @@
-"use client";
-
 import * as React from "react";
 import Image from "next/image";
-import logoIij from "../../../../public/images/logos/logo-iij.png";
-import logoAntaka from "../../../../public/images/logos/logo-antaka.png";
-import logoReact from "../../../../public/icons/react.svg"
-import logoLaravel from "../../../../public/icons/laravel.svg"
-import logoPhp from "../../../../public/icons/php.svg"
-import logoJquery from "../../../../public/icons/jquery.svg"
-import logoMysql from "../../../../public/icons/mysql.svg"
+import logoReact from "../../../../public/icons/react.svg";
+import logoLaravel from "../../../../public/icons/laravel.svg";
+import logoMysql from "../../../../public/icons/mysql.svg";
+import logoSafous from "../../../../public/images/logos/logo-safous.png";
 
 export default function ProjectCard() {
   const projects = [
     {
       id: 1,
       name: "Safous",
-      description: "",
-      logo: logoIij || "",
+      description: "Web application that implements Zero Trust Access as a Service, a topic related to cybersecurity.",
+      logo: logoSafous,
       techStack: [logoLaravel, logoReact,  logoMysql]
     }
   ];
@@ -25,34 +20,30 @@ export default function ProjectCard() {
     <>
       {projects.map(project => (
         <div 
-          className="px-4 mx-auto my-4 border rounded border-cyan-500 text-white h-[48%] w-[90%] flex flex-col"
+          className="p-4 mx-auto my-4 border rounded border-cyan-500 text-white w-[90%] flex flex-col"
           id="project-card" 
           key={project.id}
         >
-          <div className="text-center">
-            <Image
-              src={project.logo}
-              width={100}
-              height={100}
-              alt={`logo of ${project.logo}`}
-              className="m-auto"
-            />
-          </div>
-          <div>
-            <h1>{project.name}</h1>
-            <h2>{project.description}</h2>
-            <p className="mt-4">Tech Stack</p>
-            <div className="inline-flex">
-              {project.techStack.map(tech => (
-                <Image
-                  src={tech}
-                  width={40}
-                  height={40}
-                  alt={`logo of ${tech}`}
-                  className="mx-1"
-                />
-              ))}
-            </div>
+          <h1 className="text-2xl font-bold text-cyan-500">
+            {project.name}
+          </h1>
+          <h2>{project.description}</h2>
+          <Image
+            src={project.logo}
+            alt={`logo of ${project.logo}`}
+            className="w-full mx-auto my-2 border-2 rounded border-cyan-500"
+          />
+          <p>Tech Stack</p>
+          <div className="inline-flex">
+            {project.techStack.map(tech => (
+              <Image
+                src={tech}
+                width={40}
+                height={40}
+                alt={`logo of ${tech}`}
+                className="mx-1"
+              />
+            ))}
           </div>
         </div>
       ))}
