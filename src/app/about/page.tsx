@@ -3,7 +3,7 @@ import bimaPhoto from "../../../public/images/bima.png";
 
 export default function About() {
   return (
-    <section className="min-h-screen px-4 py-10" id="about">
+    <section className="px-4 py-10" id="about">
       <div className="flex">
         <h1 className="my-auto text-xl font-bold"> 
           Hi! I'm <br />
@@ -14,9 +14,7 @@ export default function About() {
         <Image 
           src={bimaPhoto}
           alt="bima-photo"
-          width={120}
-          height={120}
-          className="mx-auto my-4"
+          className="mx-auto my-4 w-[120px] h-[120px]"
         />
       </div>
       <br />
